@@ -93,7 +93,7 @@ module launchpad_address::coin_launchpad {
         symbol: String,
         decimals: u8,
         icon_uri: String,
-        project_uri: String
+        project_uri: String,
     ) acquires Registry, LaunchpadConfig {
         let sender_addr = signer::address_of(sender);
         let launchpad_signer = &get_launchpad_signer();

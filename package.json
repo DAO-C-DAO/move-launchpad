@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "move-deploy": "ts-node node_script/deploy_contract.ts",
+    "move-test": "ts-node node_script/test_contract.ts",
     "transfer": "ts-node node_script/write/transfer.ts",
     "get-balance": "ts-node node_script/read/get_balance.ts",
-    "move-deploy": "ts-node node_script/deploy_contract.ts",
-    "move-test": "ts-node node_script/test_contract.ts"
+    "create-coin": "ts-node node_script/write/create_coin.ts",
+    "get-created-coins": "ts-node node_script/read/get_created_coins.ts",
+    "get-coin-data": "ts-node node_script/read/get_coin_data.ts"
   },
   "author": "",
   "license": "ISC",

@@ -7,9 +7,9 @@ std = "0x1"
 initia_std = "0x1"
 
 # use this when deploying
-launchpad_address = "0xB59FDAB462E531C85C72346AD722491A65DF3600"
+#launchpad_address = "0xB59FDAB462E531C85C72346AD722491A65DF3600"
 # use this when testing
-# launchpad_address = "_"
+ launchpad_address = "_"
 
 [dev-addresses]
 

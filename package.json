@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "transfer": "ts-node scripts/write/transfer.ts",
-    "get-balance": "ts-node scripts/read/get_balance.ts",
-    "get-tx": "ts-node scripts/read/get_tx.ts",
-    "move-unit-test": "./sh_scripts/move_unit_test.sh"
+    "transfer": "ts-node node_script/write/transfer.ts",
+    "get-balance": "ts-node node_script/read/get_balance.ts",
+    "move-deploy": "ts-node node_script/deploy_contract.ts",
+    "move-test": "ts-node node_script/test_contract.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@initia/builder.js": "^0.1.6",
     "@initia/initia.js": "^0.2.2",
     "dotenv": "^16.4.5"
   },

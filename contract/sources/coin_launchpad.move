@@ -117,7 +117,7 @@ module launchpad_address::coin_launchpad {
         managed_coin::mint(launchpad_signer, sender_addr, coin_metadata, maximum_supply);
 
         let registry = borrow_global_mut<Registry>(launchpad_signer_addr);
-        assert!(table::contains(&registry.coins, symbol), ECOIN_SYMBOL_IS_TAKEN);
+        assert!(!table::contains(&registry.coins, symbol), ECOIN_SYMBOL_IS_TAKEN);
         table::add(&mut registry.coins, symbol, coin_metadata);
 
         event::emit(CreateCoinEvent {
@@ -142,7 +142,7 @@ module launchpad_address::coin_launchpad {
 
     #[view]
     public fun get_created_coins(start_after: Option<String>, limit: Option<u64>): vector<Object<Metadata>> acquires Registry {
-        let registry = borrow_global<Registry>(@launchpad_address);
+        let registry = borrow_global<Registry>(get_launchpad_signer_addr());
         let iter = table::iter(&registry.coins, start_after, option::none(), 1);
         let result = vector[];
         for (i in 0.. *option::borrow_with_default(&limit, &DEFAULT_QUERY_LIMIT)) {

@@ -6,9 +6,13 @@ version = "0.0.0"
 std = "0x1"
 initia_std = "0x1"
 
-launchpad_address = "_"
+# use this when deploying
+launchpad_address = "0xB59FDAB462E531C85C72346AD722491A65DF3600"
+# use this when testing
+# launchpad_address = "_"
 
 [dev-addresses]
+
 # set to random address for testing
 launchpad_address = "0x999"
 

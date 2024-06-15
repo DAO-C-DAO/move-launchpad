@@ -1,0 +1,16 @@
+[package]
+name = "coin_launchpad"
+version = "0.0.0"
+
+[addresses]
+std = "0x1"
+initia_std = "0x1"
+
+launchpad_address = "_"
+
+[dev-addresses]
+# set to random address for testing
+launchpad_address = "0x999"
+
+[dependencies]
+InitiaStdlib = { git = "https://github.com/initia-labs/move-natives", subdir = "initia_stdlib", rev = "main" }
